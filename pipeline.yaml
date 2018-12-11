@@ -1,0 +1,33 @@
+---
+name : portal-theme
+sourceControl:
+   enable: yes
+   workspace: /home/mebada/workspace/CIMOHAP/
+   type: git
+   url:  https://github.ibm.com/mohap/portal-theme
+   branch: develop
+   user: mebada
+   password: 360f5faa30532298426a0a6f665f4904a2173a31
+
+
+build:
+   enable: yes 
+   tagCode: no
+   BuildCommand: ant -f /home/mebada/workspace/CIMOHAP/MOHAPThemeDynamic/build.xml && ant -f /home/mebada/workspace/CIMOHAP/MOHAPThemeStatic/build.xml && ant -f /home/mebada/workspace/CIMOHAP/MOHAPThemeEAR/build.xml
+
+deploy:   
+    enable: yes
+    artifactLocation: /home/mebada/workspace/CIMOHAP/MOHAPThemeEAR/dist/MOHAPThemeEAR.ear
+    host : 10.12.11.1
+    user: ibmact
+    password: ibmact
+    remoteWorkspace: /data/home/ibmact/deployBall/dist/MOHAPThemeEAR/current/
+    deployCommand: source  ~/deployBall/etc/dev_MOHAPThemeEAR.profile &&  ~/deployBall/dist/MOHAPThemeEAR/current/deploy.sh
+
+
+#test:
+#   enable: yes
+#   testLocal:
+#   testRemote: 
+
+

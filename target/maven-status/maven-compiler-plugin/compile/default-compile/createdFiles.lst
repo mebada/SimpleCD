@@ -1,0 +1,5 @@
+org/icetank/simpleCD/Pipeline.class
+org/icetank/simpleCD/App.class
+org/icetank/simpleCD/ScpTo$MyUserInfo.class
+org/icetank/simpleCD/ScpTo.class
+org/icetank/simpleCD/SSHManager.class
